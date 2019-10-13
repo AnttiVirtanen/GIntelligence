@@ -1,2 +1,2 @@
 # GIntelligence
-AI/ML
+Learn AI/ML
