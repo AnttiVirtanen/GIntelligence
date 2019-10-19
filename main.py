@@ -4,77 +4,88 @@ from algorithms import tree_search
 def main():
     # Map of romania as test data
     graph = [
-        {"name": "Arad",
+        {"name": "Arad", "cost": 0, "step_cost": 0,
          "actions": [
-             {"name": "Zerind", "cost": 75},
-             {"name": "Sibiu", "cost": 140},
-             {"name": "Timisoara", "cost": 118}
+             {"name": "Zerind", "cost": 75, "step_cost": 1},
+             {"name": "Sibiu", "cost": 140, "step_cost": 1},
+             {"name": "Timisoara", "cost": 118, "step_cost": 1}
          ]},
 
-        {"name": "Zerind",
+        {"name": "Zerind", "cost": 0, "step_cost": 0,
          "actions": [
-             {"name": "Gradea", "cost": 71},
-             {"name": "Arad", "cost": 75}
+             {"name": "Gradea", "cost": 71, "step_cost": 1},
+             {"name": "Arad", "cost": 75, "step_cost": 1}
          ]},
 
-        {"name": "Sibiu",
+        {"name": "Sibiu", "cost": 0, "step_cost": 0,
          "actions": [
-             {"name": "Gradea", "cost": 151},
-             {"name": "Fagaras", "cost": 99},
-             {"name": "Rimnicu", "cost": 80},
-             {"name": "Arad", "cost": 140}
+             {"name": "Gradea", "cost": 151, "step_cost": 1},
+             {"name": "Fagaras", "cost": 99, "step_cost": 1},
+             {"name": "Rimnicu", "cost": 80, "step_cost": 1},
+             {"name": "Arad", "cost": 140, "step_cost": 1}
          ]},
 
-        {"name": "Timisoara",
+        {"name": "Timisoara", "cost": 0, "step_cost": 0,
          "actions": [
-             {"name": "Lugoj", "cost": 111},
-             {"name": "Arad", "cost": 118}
+             {"name": "Lugoj", "cost": 111, "step_cost": 1},
+             {"name": "Arad", "cost": 118, "step_cost": 1}
          ]},
 
-        {"name": "Gradea",
+        {"name": "Gradea", "cost": 0, "step_cost": 0,
          "actions": [
-             {"name": "Sibiu", "cost": 151},
-             {"name": "Zerind", "cost": 71}
+             {"name": "Sibiu", "cost": 151, "step_cost": 1},
+             {"name": "Zerind", "cost": 71, "step_cost": 1}
          ]},
 
-        {"name": "Fagaras",
+        {"name": "Fagaras", "cost": 0, "step_cost": 0,
          "actions": [
-             {"name": "Bucharest", "cost": 211},
-             {"name": "Sibiu", "cost": 99}
+             {"name": "Bucharest", "cost": 211, "step_cost": 1},
+             {"name": "Sibiu", "cost": 99, "step_cost": 1}
          ]},
 
-        {"name": "Rimnicu",
+        {"name": "Rimnicu", "cost": 0, "step_cost": 0,
          "actions": [
-             {"name": "Pitesti", "cost": 91},
-             {"name": "Craiova", "cost": 146},
-             {"name": "Sibiu", "cost": 80}
+             {"name": "Pitesti", "cost": 91, "step_cost": 1},
+             {"name": "Craiova", "cost": 146, "step_cost": 1},
+             {"name": "Sibiu", "cost": 80, "step_cost": 1}
          ]},
 
-        {"name": "Lugoj",
+        {"name": "Lugoj", "cost": 0, "step_cost": 0,
          "actions": [
-             {"name": "Mehadia", "cost": 70},
-             {"name": "Timisoara", "cost": 111}
+             {"name": "Mehadia", "cost": 70, "step_cost": 1},
+             {"name": "Timisoara", "cost": 111, "step_cost": 1}
          ]},
 
-        {"name": "Pitesti",
+        {"name": "Pitesti", "cost": 0, "step_cost": 0,
          "actions": [
-             {"name": "Bucharest", "cost": 101},
-             {"name": "Craiova", "cost": 138},
-             {"name": "Rimnicu", "cost": 97}
+             {"name": "Bucharest", "cost": 101, "step_cost": 1},
+             {"name": "Craiova", "cost": 138, "step_cost": 1},
+             {"name": "Rimnicu", "cost": 97, "step_cost": 1}
          ]},
 
-        {"name": "Craiova",
+        {"name": "Craiova", "cost": 0, "step_cost": 0,
          "actions": [
-             {"name": "Drobeta", "cost": 120},
-             {"name": "Rimnicu", "cost": 146},
-             {"name": "Pitesti", "cost": 138}
+             {"name": "Drobeta", "cost": 120, "step_cost": 1},
+             {"name": "Rimnicu", "cost": 146, "step_cost": 1},
+             {"name": "Pitesti", "cost": 138, "step_cost": 1}
          ]},
 
-        {"name": "Medadia",
+        {"name": "Mehadia", "cost": 0, "step_cost": 0,
          "actions": [
-             {"name": "Drobeta", "cost": 75},
-             {"name": "Lugoj", "cost": 70}
-         ]}
+             {"name": "Drobeta", "cost": 75, "step_cost": 1},
+             {"name": "Lugoj", "cost": 70, "step_cost": 1}
+         ]},
+
+        {"name": "Drobeta", "cost": 0, "step_cost": 0,
+         "actions": [
+             {"name": "Craiova", "cost": 120, "step_cost": 1},
+             {"name": "Mehadia", "cost": 75, "step_cost": 1}
+         ]},
+        {"name": "Bucharest", "cost": 0, "step_cost": 0,
+         "actions": [
+             {"name": "Pitesti", "cost": 101, "step_cost": 1},
+             {"name": "Fagaras", "cost": 211, "step_cost": 1}
+         ]},
     ]
 
     path = tree_search(graph, "Bucharest")
