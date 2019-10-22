@@ -45,7 +45,7 @@ def main():
 
         {"name": "Rimnicu", "cost": 0, "step_cost": 0,
          "actions": [
-             {"name": "Pitesti", "cost": 91, "step_cost": 1},
+             {"name": "Pitesti", "cost": 97, "step_cost": 1},
              {"name": "Craiova", "cost": 146, "step_cost": 1},
              {"name": "Sibiu", "cost": 80, "step_cost": 1}
          ]},
