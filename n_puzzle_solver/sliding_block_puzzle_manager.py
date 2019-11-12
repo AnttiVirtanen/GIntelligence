@@ -14,7 +14,7 @@ class SlidingBlockPuzzleManager(GraphSearchable):
         return len(self.frontiers) > 0
 
     def is_goal(self, node):
-        return self.state == node
+        return self.goal_state == node
 
     def goal_found(self, node):
         print("Goal found, awesome.")
@@ -22,8 +22,8 @@ class SlidingBlockPuzzleManager(GraphSearchable):
     def add_node_to_explored(self, node):
         self.explored.append(node)
 
-    def get_next_states(self):
-        return self.state.move_puzzle()
+    def get_next_states(self, node):
+        return node.move_puzzle()
 
     def should_add_node_to_frontiers(self, node):
         node_in_explored = node in self.explored

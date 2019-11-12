@@ -15,7 +15,7 @@ class GraphSearchable(ABC):
     def add_node_to_explored(self, node):
         raise NotImplementedError
 
-    def get_next_states(self):
+    def get_next_states(self, node):
         raise NotImplementedError
 
     def should_add_node_to_frontiers(self, node):

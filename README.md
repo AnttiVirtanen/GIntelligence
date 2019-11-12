@@ -1,2 +1,3 @@
 # GIntelligence
-Learn AI/ML
+- Learn AI/ML
+- Sliding block puzzle solver
